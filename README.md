@@ -6,10 +6,10 @@
 * [Abstract](#abstract)
 * [Trust and Reputation background](#trust-and-reputation-background)
 * [Problem Statement](#problem-statement)
-* [Protocol](#protocol)
-    + [Model](#model)
-    + [Technical](#technical)
-    + [Token](#token-model)
+* [Protocol design](#protocol-design)
+    + [Actors](#actors)
+    + [Implementation](#implementation)
+    + [Token usage](#token-usage)
 * [Vulnerabilities and Attacks](#vulnerabilities-and-attacks)
 
 
@@ -104,7 +104,7 @@ Access to information described above becomes even more important when:
 Current reputation platforms often provide averaged scores and personalized expectations are not taken into account. And we can personalize reputation, increase sense of trustworthiness and security having information described above available upon the request.
 
 
-## Protocol
+## Protocol design
 
 Protocol is aiming to create generalized solution for the problem described above and allow network participants to use it as foundation for trustful communication.
 
@@ -117,9 +117,9 @@ Our development is driven by following principles:
 - Improvements are driven by community via Improvement proposals, bug bounty and other means.
 
 
-### Model
+### Actors
 
-##### Reputation Passport Owner
+**Reputation Passport Owner**
 
 Entity that has an incentive to establish censorship resistant representation of trustworthiness. Depending on a use case motivation can differ: get access to services (loan, rent a house and etc.), proof credibility of previous deals, monetize valuable information and etc.
 
@@ -139,65 +139,78 @@ Passports can be linked to represent specific relation with other objects (depen
 Information is stored in a public or private manner on behalf of facts providers. Passport owner grants access per each data point stored on the passport.
 
 
-##### Facts Provider
+**Facts Provider**
 
 3d parties can provide simple facts (e.g. # of deals made, # of claims made and etc.) about Passport owner in a permissionless manner from content perspective.
 
 
 Facts provider can acts in push mode by default. Data can be provided as public or private based on Passport owner settings.
 
-##### Smart Facts Provider
+**Smart Facts Provider**
 
 3d parties also can act as Smart Facts providers. In this case they can provide complex/combined inputs and/or extended insights (e.g. probability of claim, estimated deal duration) by applying mathematical models to their data and/or passport's data (both public and private) for Passport owner.
 
 Smart Facts provider can act in pull or push mode. Data can be provided as public or private based on Passport owner settings. In addition Smart Facts providers might not be storing information to the Passport.
 
-##### Requestor
+**Requestor**
 
 Anyone who has an incentive to get access to public or private facts (e.g. extended reviews, if above certain age, if is in the country) or calculated insights by smart facts providers (e.g. social score calculated based on public and private facts)
 
-### Technical
+### Implementation
 
-#### Main concept
+Protocol is designed to be flexible and gives users a possibility to decide how to store information a) on-chain or off-chain b) in a public or private manner. How exactly specific information is going to be stored is left for the users to decide as it involves financial and security aspects which are best known by the users themselves and different options can be used depending on the context.
+- Bootstrap reputation protocol: https://gitlab.com/monetha/protocol-go-sdk#bootstrap-reputation-protocol
+- Build Go SDK: https://gitlab.com/monetha/protocol-go-sdk#building-the-source 
+ 
+
+
 ![](diagrams/protocol-concept.png)
 
 
-#### Facts provisioning
+**Passport owners**
 
-Protocol is designed to be flexible and gives users a possibility to decide how to store information a) on-chain or off-chain b) in a public or private manner. How exactly specific information is going to be stored is left for the users to decide as it involves financial and security aspects which are best known by the users themselves and different options can be used depending on the context.
+- Anyone with incentive to have transferable reputation can create Reputation passport.
+- _Source:_ https://gitlab.com/monetha/protocol-contracts#passport 
 
-Facts providers types:
+
+**Facts providers**
 
 - Registered
-  - Well-known and trusted source (e.g. governmental services)
-  - Applications where Passport is linked
-- Unknown
+  - Well-known and trusted source (e.g. governmental services, appplications, person)
+  - Such fact provider will also have their Passport linked to the registry
+- Unknown/Anonymous
   - Anybody can provide additional information about Passport holder
+- All data inputs (stored via protocol) are signed by facts providers (anonymous or known)
+- _Source:_ https://gitlab.com/monetha/protocol-contracts#fact-provider-registry
 
-Considerations
+
+**Storage types**
 
 - On-chain (Ethereum) storage
   - Transactions data
   - Event logs
   - Blockchain storage
-- Off-chain (IPFS) storage
+- Off-chain storage
   - Data from a single provider is stored as linked list off-chain
   - Only _hash_ is stored on-chain and the rest of information is appended to the list
-- Private data
-  - Encrypted
-  - Prepared for Zero Knowledge proofs (where possible to apply)
-- All data inputs (stored via protocol) are signed by facts providers (anonymous or known)
-- Anyone (application, sercice provider or a person) can store data to the passport. But there is a classification of facts providers:
-  - Anonymous -> any address
-  - Known -> facts provider has its own passport and is whitelisted in a specific registry of facts providers (which are assumed more trusted as the disclose their identity)
+- _Source (Go SDK)_: https://gitlab.com/monetha/protocol-go-sdk#usage 
+
+
+**Data sensitivity**
+- Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights and etc.)
+- Private data: intended for sensitive information (address, birth date, personal scoring and etc.). Prepared for Zero Knowledge proofs (where possible to apply)
+    - **_Work in progress_**
+
+**Repositories**
+- Reputation protocol contracts: https://gitlab.com/monetha/protocol-contracts 
+- Go SDK: https://gitlab.com/monetha/protocol-go-sdk 
+- JavaScript SDK: https://gitlab.com/monetha/protocol-js-sdk **_(work in progress)_**
 
 
 
-### Token model
+### Token usage
 
-Number of requests to get access to private data stored within the Passport. Tokens are distributed from Requestor to Facts Provider and Passport owner.
-
-_Work in progress_
+**_Work in progress._** Number of requests to get access to private data stored within the Passport. Tokens are distributed from Requestor to Facts Provider and Passport owner.
 
 
 
