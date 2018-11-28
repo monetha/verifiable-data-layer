@@ -160,8 +160,8 @@ Anyone who has an incentive to get access to public or private facts (e.g. exten
 ### Implementation
 
 The implementation is designed to be flexible and give its users a possibility to decide on how to store information: a) on-chain or off-chain; b) in a public or private manner. How exactly specific information is going to be stored is left for the users to decide, as it involves financial and security aspects which are best known by the users themselves and different options can be used depending on the context.
-- Bootstrap reputation layer: https://gitlab.com/monetha/protocol-go-sdk#bootstrap-reputation-protocol
-- Build Go SDK: https://gitlab.com/monetha/protocol-go-sdk#building-the-source 
+- Bootstrap reputation layer: https://gitlab.com/monetha/reputation-go-sdk#bootstrap-reputation-layer
+- Build Go SDK: https://gitlab.com/monetha/reputation-go-sdk#building-the-source 
  
 
 
@@ -171,7 +171,7 @@ The implementation is designed to be flexible and give its users a possibility t
 **Passport Owners**
 
 - Anyone with an incentive to have transferable reputation can create a Reputation Passport.
-- _Source:_ https://gitlab.com/monetha/protocol-contracts#passport 
+- _Source:_ https://gitlab.com/monetha/reputation-contracts#passport 
 
 
 **Facts Providers**
@@ -182,7 +182,7 @@ The implementation is designed to be flexible and give its users a possibility t
 - Unknown/Anonymous:
   - Anybody can provide additional information about the Passport Owner.
 - All data inputs (stored via reputation layer) are signed by Facts Providers (anonymous or known)
-- _Source:_ https://gitlab.com/monetha/protocol-contracts#fact-provider-registry
+- _Source:_ https://gitlab.com/monetha/reputation-contracts#fact-provider-registry
 
 
 **Storage Types**
@@ -194,7 +194,7 @@ The implementation is designed to be flexible and give its users a possibility t
 - Off-chain storage:
   - Data from a single Facts Provider is stored as a linked list off-chain;
   - Only the _hash_ is stored on-chain and the rest of information is appended to the list.
-- _Source (Go SDK)_: https://gitlab.com/monetha/protocol-go-sdk#usage 
+- _Source (Go SDK)_: https://gitlab.com/monetha/reputation-go-sdk#usage 
 
 
 **Data Sensitivity**
@@ -203,9 +203,9 @@ The implementation is designed to be flexible and give its users a possibility t
     - **_Work in progress_**
 
 **Repositories**
-- Reputation smart contracts: https://gitlab.com/monetha/protocol-contracts 
-- Go SDK: https://gitlab.com/monetha/protocol-go-sdk 
-- JavaScript SDK: https://gitlab.com/monetha/protocol-js-sdk **_(work in progress)_**
+- Reputation smart contracts: https://gitlab.com/monetha/reputation-contracts 
+- Go SDK: https://gitlab.com/monetha/reputation-go-sdk 
+- JavaScript SDK: https://gitlab.com/monetha/reputation-js-sdk **_(work in progress)_**
 
 
 
