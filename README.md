@@ -122,7 +122,7 @@ Our development is driven by the following principles:
 
 **Reputation Passport Owner**
 
-An entity that has an incentive to establish a censorship resistant representation of trustworthiness. Depending on a use case, the motivation can differ: get access to services (loan, rent a house, etc.), prove the credibility of previous deals, monetize valuable information, etc.
+An entity that has an incentive to establish a censorship resistant representation of trustworthiness. Depending on a use case, the motivation can differ: get access to services (loan, rent a house, etc.), prove the credibility of previous deals, monetize valuable information, enforce certain behaviour etc.
 
 Types of Passport Owners:
 
@@ -137,7 +137,7 @@ Passports can be linked to represent a specific relation with other objects (dep
 - A person owns items;
 - People are working for a company or service provider.
 
-Information is stored in a public or private manner on behalf of Facts Providers. The Passport Owner grants access per each data point stored on the Passport.
+Information is stored in a public or private manner on behalf of Facts Providers. The Passport Owner grants access per each data point stored on the Passport and Passport's logic defines possible behaviour and state transition.
 
 
 **Facts Provider**
@@ -171,6 +171,7 @@ The implementation is designed to be flexible and give its users a possibility t
 **Passport Owners**
 
 - Anyone with an incentive to have transferable reputation can create a Reputation Passport.
+- Reputation Passport can implement different bussines logic to meet the needs of a specific use case to ensure certain behaviour between parties. 
 - _Source:_ https://gitlab.com/monetha/reputation-contracts#passport 
 
 
@@ -195,12 +196,12 @@ The implementation is designed to be flexible and give its users a possibility t
   - Data from a single Facts Provider is stored as a linked list off-chain;
   - Only the _hash_ is stored on-chain and the rest of information is appended to the list.
 - _Source (Go SDK)_: https://gitlab.com/monetha/reputation-go-sdk#usage 
+- _Source (JS SDK)_: https://gitlab.com/monetha/reputation-js-sdk#usage
 
 
 **Data Sensitivity**
 - Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
-- Private data: intended for sensitive information (address, birth date, personal score, etc.). Prepared for zero-knowledge proofs (where possible to apply).
-    - **_Work in progress_**
+- Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared **[implementation design](private-data.md)** document.
 
 **Repositories**
 - Reputation smart contracts: https://gitlab.com/monetha/reputation-contracts 
