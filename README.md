@@ -17,15 +17,14 @@
 
 ## Abstract
 
-The reputation layer behind the framework is designed in a way which enables network participants to evaluate the trustworthiness of one another by securely accessing context-relevant information. This helps the parties to ensure that their expectations are met before initiating a transaction with each other. 
+The Reputation layer behind Monetha's Decentralized Reputation Framework is designed in a way which enables network participants to evaluate the trustworthiness of one another by securely accessing context-relevant information. This helps the parties to ensure that their expectations are met before initiating a transaction with each other. 
 
-We aim to increase the confidence and probability of success for any transaction between parties by providing the Reputation Layer with the following key elements and possibilities:
+We aim to increase the confidence and probability of success for any transaction between parties by providing the Reputation layer with the following key elements and possibilities:
 
-- A Reputation Passport which is a collection of data points about an entity (person, object, organization, etc.) stored in a secure and censorship resistant manner;
-- The Passport is not tied to a single vendor and allows you to transfer and use your reputation capital across many platforms;
-- Exchange contextually relevant data with many requestors (applications, platforms, etc.);
-- Own your data and manage access to it;
-- Monetize your reputation capital;
+- A Reputation Passport, which is a collection of data points about an entity (person, object, organization, etc.) stored in a secure and censorship resistant manner. The Passport is not tied to a single vendor and allows its owners to transfer and use their reputation capital across many platforms;
+- Exchange of contextually relevant data with many requestors (applications, platforms, etc.);
+- Ownership of data and control of access to it;
+- Monetization of reputation capital;
 - Utilities for third party developers to build custom applications for specific use cases.
 
 ## Trust and Reputation Background
@@ -107,12 +106,12 @@ Current reputation solutions often provide averaged scores, and personalized exp
 
 ## Reputation Layer Design
 
-The solution is aiming to create a generalized solution for the problem described above and allow network participants to use it as a foundation for trustful communication.
+We aim to create a generalized solution for the problem described above and allow network participants to use it as a foundation for trustful communication.
 
-Our development is driven by the following principles:
+The development is driven by the following principles:
 - Open-source project;
 - Reputation contracts are upgradable;
-- Censorship resistance is our main target. Passport Owners control write permissions and access to their private data;
+- Censorship resistance is our main target. Reputation Passport Owners control write permissions and access to their private data;
 - Misuse is easily detectable;
 - User and developer friendly;
 - Improvements are driven by the community via proposals, bug bounty and other means.
@@ -122,7 +121,7 @@ Our development is driven by the following principles:
 
 **Reputation Passport Owner**
 
-An entity that has an incentive to establish a censorship resistant representation of trustworthiness. Depending on a use case, the motivation can differ: get access to services (loan, rent a house, etc.), prove the credibility of previous deals, monetize valuable information, enforce certain behaviour etc.
+An entity that has an incentive to establish a censorship resistant representation of trustworthiness. Depending on the use case, the motivation can differ: get access to services (loan, rent a house, etc.), prove the credibility of previous deals, monetize valuable information, enforce certain behavior, and so on.
 
 Types of Passport Owners:
 
@@ -137,7 +136,7 @@ Passports can be linked to represent a specific relation with other objects (dep
 - A person owns items;
 - People are working for a company or service provider.
 
-Information is stored in a public or private manner on behalf of Facts Providers. The Passport Owner grants access per each data point stored on the Passport and Passport's logic defines possible behaviour and state transition.
+Information is stored in a public or private manner on behalf of Facts Providers. The Passport Owner grants access per each data point stored in the Passport, and the Passport's logic defines possible behavior and state transition.
 
 
 **Facts Provider**
@@ -149,7 +148,7 @@ Facts Providers can act in push mode by default. Data can be provided as public 
 
 **Smart Facts Provider**
 
-Third parties also can act as Smart Facts Providers. In this case, they can provide complex/combined inputs and/or extended insights (e.g. the probability of a claim, estimated deal duration) by applying mathematical models to their data and/or Passport's data (both public and private) for the Passport Owner.
+Third parties also can act as Smart Facts Providers. In this case, they can provide complex/combined inputs and/or extended insights (e.g. the probability of a claim, estimated deal duration) by applying mathematical models to their data and/or the Passport's data (both public and private) for the Passport Owner.
 
 Smart Facts Providers can act in pull or push mode. Data can be provided as public or private based on the Passport Owner's settings. In addition, Smart Facts Providers might not be storing information in the Passport.
 
@@ -160,7 +159,7 @@ Anyone who has an incentive to get access to public or private facts (e.g. exten
 ### Implementation
 
 The implementation is designed to be flexible and give its users a possibility to decide on how to store information: a) on-chain or off-chain; b) in a public or private manner. How exactly specific information is going to be stored is left for the users to decide, as it involves financial and security aspects which are best known by the users themselves and different options can be used depending on the context.
-- Bootstrap reputation layer: https://gitlab.com/monetha/reputation-go-sdk#bootstrap-reputation-layer
+- Bootstrap Reputation layer: https://gitlab.com/monetha/reputation-go-sdk#bootstrap-reputation-layer
 - Build Go SDK: https://gitlab.com/monetha/reputation-go-sdk#building-the-source 
  
 
@@ -171,7 +170,7 @@ The implementation is designed to be flexible and give its users a possibility t
 **Passport Owners**
 
 - Anyone with an incentive to have transferable reputation can create a Reputation Passport.
-- Reputation Passport can implement different bussines logic to meet the needs of a specific use case to ensure certain behaviour between parties. 
+- The Reputation Passport can implement different bussines logic to meet the needs of a specific use case to ensure certain behavior between parties. 
 - _Source:_ https://gitlab.com/monetha/reputation-contracts#passport 
 
 
@@ -182,7 +181,7 @@ The implementation is designed to be flexible and give its users a possibility t
   - Such a Facts Provider will also have their Passport linked to the registry.
 - Unknown/Anonymous:
   - Anybody can provide additional information about the Passport Owner.
-- All data inputs (stored via reputation layer) are signed by Facts Providers (anonymous or known)
+- All data inputs (stored via the Reputation layer) are signed by Facts Providers (anonymous or known).
 - _Source:_ https://gitlab.com/monetha/reputation-contracts#fact-provider-registry
 
 
@@ -201,7 +200,7 @@ The implementation is designed to be flexible and give its users a possibility t
 
 **Data Sensitivity**
 - Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
-- Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared **[implementation design](private-data.md)** document.
+- Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared an **[implementation design](private-data.md)** document.
 
 **Repositories**
 - Reputation smart contracts: https://gitlab.com/monetha/reputation-contracts 
@@ -220,9 +219,9 @@ The implementation is designed to be flexible and give its users a possibility t
 
 ### Facts Spam
 
-The Reputation Layer enables anyone to provide facts for a Reputation Passport:
+The Reputation layer enables anyone to provide facts for a Reputation Passport:
 
-The solution:
+Our solution:
 
 - Facts provisioning costs money;
 - Categorization of Facts Providers:
@@ -243,7 +242,7 @@ Solution:
 
 ### Data Anonymity
 
-The Passport will hold sensitive information about its owner, so the incentive to hack the Monetha platform is very high.
+The Passport will hold sensitive information about its owner, so the incentive to hack the Platform is very high.
 
 Solutions:
 
@@ -279,4 +278,4 @@ The solutions are in favour of our implementation:
 
 - Provide a valuable and useful solution;
 - Partnerships with Facts Providers;
-- Grow a strong development community to build context specific solutions on top of the Monetha's platform.
+- Grow a strong development community to build context specific solutions on top of Monetha's Reputation Platform.
