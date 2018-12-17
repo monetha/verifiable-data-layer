@@ -9,6 +9,11 @@
 * [Reputation Layer Design](#reputation-layer-design)
     + [Actors](#actors)
     + [Implementation](#implementation)
+      + [Passport Owners](#passport-owners)
+      + [Facts Providers](#facts-providers)
+      + [Storage Types](#storage-types)
+      + [Public and Private data](#public-and-private-data)
+      + [Repositories](#repositories)
 * [Token Usage](#token-usage)
 * [Vulnerabilities and Attacks](#vulnerabilities-and-attacks)
 
@@ -167,14 +172,14 @@ The implementation is designed to be flexible and give its users a possibility t
 ![](diagrams/reputation-layer-concept.png)
 
 
-**Passport Owners**
+#### **Passport Owners**
 
 - Anyone with an incentive to have transferable reputation can create a Reputation Passport.
 - The Reputation Passport can implement different bussines logic to meet the needs of a specific use case to ensure certain behavior between parties. 
 - _Source:_ https://gitlab.com/monetha/reputation-contracts#passport 
 
 
-**Facts Providers**
+#### **Facts Providers**
 
 - Registered:
   - A well-known and trusted source (e.g. governmental services, appplications, a person);
@@ -185,7 +190,7 @@ The implementation is designed to be flexible and give its users a possibility t
 - _Source:_ https://gitlab.com/monetha/reputation-contracts#fact-provider-registry
 
 
-**Storage Types**
+#### **Storage Types**
 
 - On-chain (Ethereum) storage:
   - Transactions data;
@@ -198,14 +203,14 @@ The implementation is designed to be flexible and give its users a possibility t
 - _Source (JS SDK)_: https://gitlab.com/monetha/reputation-js-sdk#usage
 
 
-**Data Sensitivity**
+#### **Public and Private data**
 - Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
 - Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared an **[implementation design](private-data.md)** document.
 
-**Repositories**
+#### **Repositories**
 - Reputation smart contracts: https://gitlab.com/monetha/reputation-contracts 
 - Go SDK: https://gitlab.com/monetha/reputation-go-sdk 
-- JavaScript SDK: https://gitlab.com/monetha/reputation-js-sdk **_(work in progress)_**
+- JavaScript SDK: https://gitlab.com/monetha/reputation-js-sdk
 
 
 

@@ -25,12 +25,12 @@ R6: In case the solution relies on frameworks or other software, its maturity sh
 
 The following figure shows the protocol describing how private data is requested. It currently uses one-way hash functions as the commitment scheme, which are only computationally binding and hiding (unlike the commonly-used Pedersen commitments) but readily and cheaply available in Ethereum smart contracts.
 
-More detailed document describing the design is available here - [Private data exchange protocol v0.4](private-data-exchange-protocol-v04.pdf)  
+More detailed document describing the design is available here - [Private-data-exchange-protocol-v04.pdf](private-data-exchange-protocol-v04.pdf)  
 
 ![](diagrams/request-private-data.png)
 
 
 ## Academic proof
 
-**_Work in progress_**
+Document describing formal prood of protocol logic is available here - [Private-data-exchange-protocol-proof.pdf](private-data-exchange-protocol-proof.pdf)
 
