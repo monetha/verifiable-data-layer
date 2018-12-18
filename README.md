@@ -2,27 +2,23 @@
 
 # Reputation Layer
 
-
 * [Abstract](#abstract)
 * [Trust and Reputation Background](#trust-and-reputation-background)
 * [Problem Statement](#problem-statement)
 * [Reputation Layer Design](#reputation-layer-design)
-    + [Actors](#actors)
-    + [Implementation](#implementation)
-      + [Passport Owners](#passport-owners)
-      + [Facts Providers](#facts-providers)
-      + [Storage Types](#storage-types)
-      + [Public and Private data](#public-and-private-data)
-      + [Repositories](#repositories)
+  * [Actors](#actors)
+  * [Implementation](#implementation)
+    * [Passport Owners](#passport-owners)
+    * [Facts Providers](#facts-providers)
+    * [Storage Types](#storage-types)
+    * [Public and Private data](#public-and-private-data)
+    * [Repositories](#repositories)
 * [Token Usage](#token-usage)
 * [Vulnerabilities and Attacks](#vulnerabilities-and-attacks)
 
-
-
-
 ## Abstract
 
-The Reputation layer behind Monetha's Decentralized Reputation Framework is designed in a way which enables network participants to evaluate the trustworthiness of one another by securely accessing context-relevant information. This helps the parties to ensure that their expectations are met before initiating a transaction with each other. 
+The Reputation layer behind Monetha's Decentralized Reputation Framework is designed in a way which enables network participants to evaluate the trustworthiness of one another by securely accessing context-relevant information. This helps the parties to ensure that their expectations are met before initiating a transaction with each other.
 
 We aim to increase the confidence and probability of success for any transaction between parties by providing the Reputation layer with the following key elements and possibilities:
 
@@ -114,13 +110,13 @@ Current reputation solutions often provide averaged scores, and personalized exp
 We aim to create a generalized solution for the problem described above and allow network participants to use it as a foundation for trustful communication.
 
 The development is driven by the following principles:
+
 * Open-source project;
 * Reputation contracts are upgradable;
 * Censorship resistance is our main target. Reputation Passport Owners control write permissions and access to their private data;
 * Misuse is easily detectable;
 * User and developer friendly;
 * Improvements are driven by the community via proposals, bug bounty and other means.
-
 
 ### Actors
 
@@ -136,8 +132,8 @@ Types of Passport Owners:
 * Organization;
 * Service provider.
 
-
 Passports can be linked to represent a specific relation with other objects (depending on the implementation it can also be treated as registered facts), e.g.:
+
 * A person owns items;
 * People are working for a company or service provider.
 
@@ -202,23 +198,20 @@ The implementation is designed to be flexible and give its users a possibility t
 * _Source (Go SDK)_: https://github.com/monetha/reputation-go-sdk#usage 
 * _Source (JS SDK)_: https://github.com/monetha/reputation-js-sdk#usage
 
-
 #### **Public and Private data**
+
 * Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
 * Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared an **[implementation design](private-data.md)** document.
 
 #### **Repositories**
+
 * Reputation smart contracts: https://github.com/monetha/reputation-contracts 
 * Go SDK: https://github.com/monetha/reputation-go-sdk 
 * JavaScript SDK: https://github.com/monetha/reputation-js-sdk
 
-
-
 ## Token Usage
 
 **_Work in progress._** The number of requests to get access to the private data stored within the Reputation Passport. Tokens are distributed from the Requestor to the Facts Provider and Passport Owner.
-
-
 
 ## Vulnerabilities and Attacks
 
@@ -255,7 +248,6 @@ Solutions:
 * Working with security groups;
 * Open sourcing the implementation.
 
-
 ### Stealing MTH Tokens
 
 Facts Providers and Passport Owners are paid with tokens when their information is used.
@@ -264,7 +256,6 @@ Solutions:
 
 * Do not hold the funds of network participants;
 * Tokens must be distributed as soon as a request is executed.
-
 
 ### "Wrong" Facts
 
