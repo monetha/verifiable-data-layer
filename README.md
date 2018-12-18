@@ -26,20 +26,20 @@ The Reputation layer behind Monetha's Decentralized Reputation Framework is desi
 
 We aim to increase the confidence and probability of success for any transaction between parties by providing the Reputation layer with the following key elements and possibilities:
 
-- A Reputation Passport, which is a collection of data points about an entity (person, object, organization, etc.) stored in a secure and censorship resistant manner. The Passport is not tied to a single vendor and allows its owners to transfer and use their reputation capital across many platforms;
-- Exchange of contextually relevant data with many requestors (applications, platforms, etc.);
-- Ownership of data and control of access to it;
-- Monetization of reputation capital;
-- Utilities for third party developers to build custom applications for specific use cases.
+* A Reputation Passport, which is a collection of data points about an entity (person, object, organization, etc.) stored in a secure and censorship resistant manner. The Passport is not tied to a single vendor and allows its owners to transfer and use their reputation capital across many platforms;
+* Exchange of contextually relevant data with many requestors (applications, platforms, etc.);
+* Ownership of data and control of access to it;
+* Monetization of reputation capital;
+* Utilities for third party developers to build custom applications for specific use cases.
 
 ## Trust and Reputation Background
 
 **Trust** is a layered notion, used to refer to several different (although interrelated) meanings between entities _X_ (the trustor) and _Y_ (the trustee):
 
-- In its basic sense, trust is a mental and affective attitude or disposition towards _Y_, or involving two basic types of beliefs: evaluations and expectations;
-- In its richer use, trust is a decision and intention based on that disposition;
-- as well as the act of relying upon _Y_'s expected behavior;
-- and the consequent social relation established between _X_ and _Y_.
+* In its basic sense, trust is a mental and affective attitude or disposition towards _Y_, or involving two basic types of beliefs: evaluations and expectations;
+* In its richer use, trust is a decision and intention based on that disposition;
+* as well as the act of relying upon _Y_'s expected behavior;
+* and the consequent social relation established between _X_ and _Y_.
 
 **Reputation** is the collective measure of reliability derived from the interactions between parties.
 
@@ -47,9 +47,9 @@ Trust systems produce a score that reflects a personalized view of an entity's t
 
 Three tenets of distributed reputation systems:
 
-- Entities are long lived and unique (identity solution);
-- Ratings about current interactions must be captured and distributed (broadcasting by reputation reporters);
-- Ratings about past interactions must guide current decisions (model execution by audit quorum).
+* Entities are long lived and unique (identity solution);
+* Ratings about current interactions must be captured and distributed (broadcasting by reputation reporters);
+* Ratings about past interactions must guide current decisions (model execution by audit quorum).
 
 ### Trust Is Capital
 
@@ -79,16 +79,16 @@ It is also important not to have simplistic models of trust degree in terms of m
 
 Control is useful and can be a remedy in both cases, but with different roles. Control means in fact:
 
-- The possibility of improving the _trustee_'s performance, or of intervening in time – on the basis of new evidence – for remedying, revoking the delegation, etc. Control is a remedy to low expectations about the _trustee_;
-- The possibility of acquiring, through _monitoring,_ additional evidence and information run-time.
+* The possibility of improving the _trustee_'s performance, or of intervening in time – on the basis of new evidence – for remedying, revoking the delegation, etc. Control is a remedy to low expectations about the _trustee_;
+* The possibility of acquiring, through _monitoring,_ additional evidence and information run-time.
 
 ### *References:*
-- *"Trust Theory: A Socio-Cognitive and Computational Model" by Cristiano Castelfranchi,  Rino Falcone*
-- *Computational Models of Trust and Reputation: Agents, Evolutionary Games, and Social Networks by Lik Mui*
-- *A trustless privacy-preserving reputation system Alexander Schaub, Remi Bazin, Omar Hasan, and Lionel Brunie*
-- *Sepandar D. Kamvar, Mario T. Schlosser, and Hector Garcia-Molina. The EigenTrust algorithm for reputation management in p2p networks.*
-- *Stefan Dziembowski, Sebastian Faust, and Kristina Hostakova. General State Channel Networks*
-- *Oliver, Adam. "A quantitative and qualitative test of the Allais paradox using health outcomes". Journal of Economic Psychology.*
+* *"Trust Theory: A Socio-Cognitive and Computational Model" by Cristiano Castelfranchi,  Rino Falcone*
+* *Computational Models of Trust and Reputation: Agents, Evolutionary Games, and Social Networks by Lik Mui*
+* *A trustless privacy-preserving reputation system Alexander Schaub, Remi Bazin, Omar Hasan, and Lionel Brunie*
+* *Sepandar D. Kamvar, Mario T. Schlosser, and Hector Garcia-Molina. The EigenTrust algorithm for reputation management in p2p networks.*
+* *Stefan Dziembowski, Sebastian Faust, and Kristina Hostakova. General State Channel Networks*
+* *Oliver, Adam. "A quantitative and qualitative test of the Allais paradox using health outcomes". Journal of Economic Psychology.*
 
 ## Problem Statement
 
@@ -96,15 +96,15 @@ _Party 1_ wants to initiate a value exchange action with _Party 2_. But _Party 1
 
 Very often _Party 1_ would be looking for the following information:
 
-- Hard facts: proof of identity, proof of payments, credit score;
-- Proof of historical performance (preferred with similar people like her);
-- Recommendations from a social circle (the ones she knows);
-- Comparisons with alternatives.
+* Hard facts: proof of identity, proof of payments, credit score;
+* Proof of historical performance (preferred with similar people like her);
+* Recommendations from a social circle (the ones she knows);
+* Comparisons with alternatives.
 
 Access to the information described above becomes even more important when:
 
-- The cost of transaction is close to the person's limits (e.g. with the monthly income of $1000, a transaction for $100 or $9000 would lead to a completely different decision making process);
-- Emotion is tied to a transaction (e.g. hiring a nanny, buying a pet, renting your car/flat, selling something of sentimental value, getting a mortgage, choosing a roommate, etc.)
+* The cost of transaction is close to the person's limits (e.g. with the monthly income of $1000, a transaction for $100 or $9000 would lead to a completely different decision making process);
+* Emotion is tied to a transaction (e.g. hiring a nanny, buying a pet, renting your car/flat, selling something of sentimental value, getting a mortgage, choosing a roommate, etc.)
 
 Current reputation solutions often provide averaged scores, and personalized expectations are not taken into account. And we can personalize reputation, increase the sense of trustworthiness and security by having the information described above available upon request.
 
@@ -114,12 +114,12 @@ Current reputation solutions often provide averaged scores, and personalized exp
 We aim to create a generalized solution for the problem described above and allow network participants to use it as a foundation for trustful communication.
 
 The development is driven by the following principles:
-- Open-source project;
-- Reputation contracts are upgradable;
-- Censorship resistance is our main target. Reputation Passport Owners control write permissions and access to their private data;
-- Misuse is easily detectable;
-- User and developer friendly;
-- Improvements are driven by the community via proposals, bug bounty and other means.
+* Open-source project;
+* Reputation contracts are upgradable;
+* Censorship resistance is our main target. Reputation Passport Owners control write permissions and access to their private data;
+* Misuse is easily detectable;
+* User and developer friendly;
+* Improvements are driven by the community via proposals, bug bounty and other means.
 
 
 ### Actors
@@ -130,16 +130,16 @@ An entity that has an incentive to establish a censorship resistant representati
 
 Types of Passport Owners:
 
-- Person;
-- Item;
-- Entity;
-- Organization;
-- Service provider.
+* Person;
+* Item;
+* Entity;
+* Organization;
+* Service provider.
 
 
 Passports can be linked to represent a specific relation with other objects (depending on the implementation it can also be treated as registered facts), e.g.:
-- A person owns items;
-- People are working for a company or service provider.
+* A person owns items;
+* People are working for a company or service provider.
 
 Information is stored in a public or private manner on behalf of Facts Providers. The Passport Owner grants access per each data point stored in the Passport, and the Passport's logic defines possible behavior and state transition.
 
@@ -164,8 +164,8 @@ Anyone who has an incentive to get access to public or private facts (e.g. exten
 ### Implementation
 
 The implementation is designed to be flexible and give its users a possibility to decide on how to store information: a) on-chain or off-chain; b) in a public or private manner. How exactly specific information is going to be stored is left for the users to decide, as it involves financial and security aspects which are best known by the users themselves and different options can be used depending on the context.
-- Bootstrap Reputation layer: https://gitlab.com/monetha/reputation-go-sdk#bootstrap-reputation-layer
-- Build Go SDK: https://gitlab.com/monetha/reputation-go-sdk#building-the-source 
+* Bootstrap Reputation layer: https://github.com/monetha/reputation-go-sdk#bootstrap-reputation-layer
+* Build Go SDK: https://github.com/monetha/reputation-go-sdk#building-the-source 
  
 
 
@@ -174,43 +174,43 @@ The implementation is designed to be flexible and give its users a possibility t
 
 #### **Passport Owners**
 
-- Anyone with an incentive to have transferable reputation can create a Reputation Passport.
-- The Reputation Passport can implement different bussines logic to meet the needs of a specific use case to ensure certain behavior between parties. 
-- _Source:_ https://gitlab.com/monetha/reputation-contracts#passport 
+* Anyone with an incentive to have transferable reputation can create a Reputation Passport.
+* The Reputation Passport can implement different bussines logic to meet the needs of a specific use case to ensure certain behavior between parties. 
+* _Source:_ https://github.com/monetha/reputation-contracts#passport 
 
 
 #### **Facts Providers**
 
-- Registered:
-  - A well-known and trusted source (e.g. governmental services, appplications, a person);
-  - Such a Facts Provider will also have their Passport linked to the registry.
-- Unknown/Anonymous:
-  - Anybody can provide additional information about the Passport Owner.
-- All data inputs (stored via the Reputation layer) are signed by Facts Providers (anonymous or known).
-- _Source:_ https://gitlab.com/monetha/reputation-contracts#fact-provider-registry
+* Registered:
+  * A well-known and trusted source (e.g. governmental services, appplications, a person);
+  * Such a Facts Provider will also have their Passport linked to the registry.
+* Unknown/Anonymous:
+  * Anybody can provide additional information about the Passport Owner.
+* All data inputs (stored via the Reputation layer) are signed by Facts Providers (anonymous or known).
+* _Source:_ https://github.com/monetha/reputation-contracts#fact-provider-registry
 
 
 #### **Storage Types**
 
-- On-chain (Ethereum) storage:
-  - Transactions data;
-  - Event logs;
-  - Blockchain storage.
-- Off-chain storage:
-  - Data from a single Facts Provider is stored as a linked list off-chain;
-  - Only the _hash_ is stored on-chain and the rest of information is appended to the list.
-- _Source (Go SDK)_: https://gitlab.com/monetha/reputation-go-sdk#usage 
-- _Source (JS SDK)_: https://gitlab.com/monetha/reputation-js-sdk#usage
+* On-chain (Ethereum) storage:
+  * Transactions data;
+  * Event logs;
+  * Blockchain storage.
+* Off-chain storage:
+  * Data from a single Facts Provider is stored as a linked list off-chain;
+  * Only the _hash_ is stored on-chain and the rest of information is appended to the list.
+* _Source (Go SDK)_: https://github.com/monetha/reputation-go-sdk#usage 
+* _Source (JS SDK)_: https://github.com/monetha/reputation-js-sdk#usage
 
 
 #### **Public and Private data**
-- Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
-- Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared an **[implementation design](private-data.md)** document.
+* Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
+* Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared an **[implementation design](private-data.md)** document.
 
 #### **Repositories**
-- Reputation smart contracts: https://gitlab.com/monetha/reputation-contracts 
-- Go SDK: https://gitlab.com/monetha/reputation-go-sdk 
-- JavaScript SDK: https://gitlab.com/monetha/reputation-js-sdk
+* Reputation smart contracts: https://github.com/monetha/reputation-contracts 
+* Go SDK: https://github.com/monetha/reputation-go-sdk 
+* JavaScript SDK: https://github.com/monetha/reputation-js-sdk
 
 
 
@@ -228,13 +228,13 @@ The Reputation layer enables anyone to provide facts for a Reputation Passport:
 
 Our solution:
 
-- Facts provisioning costs money;
-- Categorization of Facts Providers:
-  - Trusted Facts Providers are registered and well-known;
-  - Facts Providers have their own Reputation Passport;
-  - Information provided by unknown Facts Providers most probably will not be taken into account by the Requestor.
-- The Passport Owner fully controls where and how the Passport is used.
-- The Pasport Owner can control who (what Facts Provider) stored the data and how (public or private mode), but cannot control what is stored (the content itself).
+* Facts provisioning costs money;
+* Categorization of Facts Providers:
+  * Trusted Facts Providers are registered and well-known;
+  * Facts Providers have their own Reputation Passport;
+  * Information provided by unknown Facts Providers most probably will not be taken into account by the Requestor.
+* The Passport Owner fully controls where and how the Passport is used.
+* The Pasport Owner can control who (what Facts Provider) stored the data and how (public or private mode), but cannot control what is stored (the content itself).
 
 ### Sybil Attack
 
@@ -242,8 +242,8 @@ In a fully decentralized model (depending on the implementation of how the trust
 
 Solution:
 
-- Facts Providers have their own Reputation Passport.
-- Facts Providers must have something at stake if their results are proven to be wrong.
+* Facts Providers have their own Reputation Passport.
+* Facts Providers must have something at stake if their results are proven to be wrong.
 
 ### Data Anonymity
 
@@ -251,9 +251,9 @@ The Passport will hold sensitive information about its owner, so the incentive t
 
 Solutions:
 
-- Bug bounty;
-- Working with security groups;
-- Open sourcing the implementation.
+* Bug bounty;
+* Working with security groups;
+* Open sourcing the implementation.
 
 
 ### Stealing MTH Tokens
@@ -262,8 +262,8 @@ Facts Providers and Passport Owners are paid with tokens when their information 
 
 Solutions:
 
-- Do not hold the funds of network participants;
-- Tokens must be distributed as soon as a request is executed.
+* Do not hold the funds of network participants;
+* Tokens must be distributed as soon as a request is executed.
 
 
 ### "Wrong" Facts
@@ -272,8 +272,8 @@ The Passport Owner might want to disagree with specific data points provided by 
 
 Solution:
 
-- Apply the implementation described to solve this case. Facts Providers have their own Passport. A dispute can be treated as a set of additional data points from the Passport Owner towards the Facts Provider.
-- Such information can be taken into account by the Requestor.
+* Apply the implementation described to solve this case. Facts Providers have their own Passport. A dispute can be treated as a set of additional data points from the Passport Owner towards the Facts Provider.
+* Such information can be taken into account by the Requestor.
 
 ### Forking the Reputation Layer
 
@@ -281,6 +281,6 @@ Our implementation can be forked or similar ones can be built.
 
 The solutions are in favour of our implementation:
 
-- Provide a valuable and useful solution;
-- Partnerships with Facts Providers;
-- Grow a strong development community to build context specific solutions on top of Monetha's Reputation Platform.
+* Provide a valuable and useful solution;
+* Partnerships with Facts Providers;
+* Grow a strong development community to build context specific solutions on top of Monetha's Reputation Platform.
