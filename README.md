@@ -95,9 +95,10 @@ Very often _Party 1_ would be looking for the following information:
 * Hard facts: proof of identity, proof of payments, credit score;
 * Proof of historical performance (preferred with similar people like her);
 * Recommendations from a social circle (the ones she knows);
-* Comparisons with alternatives.
+* Comparisons with alternatives;
+* Guarantee that action will be executed by _Party 2_ as expected.
 
-Access to the information described above becomes even more important when:
+Access to the relevant information and guarantee of proper action as described above becomes even more important when:
 
 * The cost of transaction is close to the person's limits (e.g. with the monthly income of $1000, a transaction for $100 or $9000 would lead to a completely different decision making process);
 * Emotion is tied to a transaction (e.g. hiring a nanny, buying a pet, renting your car/flat, selling something of sentimental value, getting a mortgage, choosing a roommate, etc.)
@@ -137,7 +138,7 @@ Passports can be linked to represent a specific relation with other objects (dep
 * A person owns items;
 * People are working for a company or service provider.
 
-Information is stored in a public or private manner on behalf of Facts Providers. The Passport Owner grants access per each data point stored in the Passport, and the Passport's logic defines possible behavior and state transition.
+Information is stored in a public or private manner on behalf of Facts Providers. Allowed actions are defined in the Passport and can vary based on the context of Passport's usage. In Addition to that the Passport Owner grants access per each data point stored on the Passport and Passport's logic defines possible behaviour and state transition.
 
 
 **Facts Provider**
