@@ -12,6 +12,7 @@
     * [Facts Providers](#facts-providers)
     * [Storage Types](#storage-types)
     * [Public and Private data](#public-and-private-data)
+    * [Permissioned blockchains support](#permissioned-blockchains-support)
     * [Repositories](#repositories)
 * [Token Usage](#token-usage)
 * [Vulnerabilities and Attacks](#vulnerabilities-and-attacks)
@@ -204,11 +205,19 @@ The implementation is designed to be flexible and give its users a possibility t
 * Public data: intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
 * Private data: intended for sensitive information (address, birth date, personal score, etc.). We have prepared an **[implementation design](private-data.md)** document.
 
+#### Permissioned blockchains support
+
+##### Quorum
+
+[Quorum](https://www.jpmorgan.com/global/Quorum)™ is an enterprise-focused version of [Ethereum](https://ethereum.org/). 
+It's ideal for any application requiring high speed and high throughput processing of private transactions within a permissioned group of known participants. Check our [Repositories](#repositories) to learn more.
+
 #### **Repositories**
 
 * Reputation smart contracts: https://github.com/monetha/reputation-contracts 
 * Go SDK: https://github.com/monetha/reputation-go-sdk 
 * JavaScript SDK: https://github.com/monetha/reputation-js-sdk
+
 
 ## Token Usage
 
