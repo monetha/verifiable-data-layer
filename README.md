@@ -14,7 +14,6 @@
     - [Public and private data](#public-and-private-data)
     - [Support for permissioned blockchains](#support-for-permissioned-blockchains)
     - [Repositories](#repositories)
-- [Token Usage](#token-usage)
 - [Vulnerabilities and Attacks](#vulnerabilities-and-attacks)
 
 ## Abstract
@@ -217,10 +216,6 @@ It's ideal for any application requiring high speed and high throughput processi
 - Reputation smart contracts: https://github.com/monetha/reputation-contracts 
 - Reputation Golang SDK: https://github.com/monetha/reputation-go-sdk 
 - Reputation JavaScript SDK: https://github.com/monetha/reputation-js-sdk
-
-## Token Usage
-
-**_Work in progress._** The number of requests to get access to the private data stored within the Reputation Passport. Tokens are distributed from the Requestor to the Facts Provider and Passport Owner.
 
 ## Vulnerabilities and Attacks
 
