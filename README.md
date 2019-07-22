@@ -163,8 +163,8 @@ How exactly specific information is going to be stored is left for the users to 
 
 ![reputation-layer-concept](diagrams/reputation-layer-concept.png)
 
-- Bootstrap Reputation layer: https://github.com/monetha/reputation-go-sdk#bootstrap-reputation-layer
-- Build Go SDK: https://github.com/monetha/reputation-go-sdk#building-the-source 
+- Bootstrap Reputation layer: https://github.com/monetha/go-verifiable-data#bootstrap-reputation-layer
+- Build Go SDK: https://github.com/monetha/go-verifiable-data#building-the-source 
 
 #### Passport Owners
 
@@ -197,12 +197,12 @@ How exactly specific information is going to be stored is left for the users to 
 - Public data:
   - intended for non-sensitive data (reputation profile, reviews, feedback, public insights, etc.).
   - All [storage types](#storage-types) are applicable for storing public data
-  - _Source (Go SDK)_: https://github.com/monetha/reputation-go-sdk#usage
+  - _Source (Go SDK)_: https://github.com/monetha/go-verifiable-data#usage
   - _Source (JS SDK)_: https://github.com/monetha/reputation-js-sdk#usage
 - Private data:
   - intended for sensitive information (address, birth date, personal score, etc.). We have prepared an **[implementation design](private-data.md)** document describing the private data exchange protocol.
   - Off-chain storage is used to save encrypted data. Only the _hash_ is stored on-chain and the rest of information is stored off-chain.
-  - _Source (Go SDK)_: https://github.com/monetha/reputation-go-sdk#private-data
+  - _Source (Go SDK)_: https://github.com/monetha/go-verifiable-data#private-data
 
 #### Support for permissioned blockchains
 
@@ -214,7 +214,7 @@ It's ideal for any application requiring high speed and high throughput processi
 #### Repositories
 
 - Reputation smart contracts: https://github.com/monetha/reputation-contracts 
-- Reputation Golang SDK: https://github.com/monetha/reputation-go-sdk 
+- Reputation Golang SDK: https://github.com/monetha/go-verifiable-data 
 - Reputation JavaScript SDK: https://github.com/monetha/reputation-js-sdk
 
 ## Vulnerabilities and Attacks
